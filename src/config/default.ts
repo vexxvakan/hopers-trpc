@@ -1,7 +1,9 @@
-/** @format */
-
 import path from "path"
-require("dotenv").config({ path: path.join(__dirname, "../../.env") })
+import * as dotenv from "dotenv"
+
+const { config } = dotenv
+
+config({ path: path.join(__dirname, "../../env.local") })
 
 const customConfig: { port: number; origin: string } = {
 	port: 8000,
