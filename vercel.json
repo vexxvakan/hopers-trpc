@@ -1,3 +1,15 @@
 {
-	"rewrites": [{ "source": "/src/(.*)", "destination": "/api" }]
+	"version": 2,
+	"builds": [
+		{
+			"src": "app.ts",
+			"use": "@now/node"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "src/app.ts"
+		}
+	]
 }
