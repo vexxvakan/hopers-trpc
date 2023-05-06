@@ -1,10 +1,10 @@
 {
 	"name": "hopers-trpc",
 	"version": "1.0.0",
-	"main": "src/app.ts",
+	"main": "index.ts",
 	"license": "MIT",
 	"scripts": {
-		"start": "ts-node-dev --respawn --transpile-only src/app.ts"
+		"start": "ts-node-dev --respawn --transpile-only index.ts"
 	},
 	"devDependencies": {
 		"@types/cors": "^2.8.13",

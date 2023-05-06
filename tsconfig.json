@@ -7,6 +7,6 @@
 		"moduleResolution": "node",
 		"noEmit": true
 	},
-	"include": ["src"],
+	"include": ["config"],
 	"exclude": ["node_modules"]
 }
