@@ -1,7 +1,7 @@
-import { t } from "../trpc"
+import { publicProcedure, router } from "../trpc"
 
-export const tokenListRouter = t.router({
-	tokenList: t.procedure.query(async () => {
+export const tokenListRouter = router({
+	tokenList: publicProcedure.query(async () => {
 		const tokenListResponse = await fetch(
 			"https://raw.githubusercontent.com/vexxvakan/hopers-tokenlist/main/tokenList.json"
 		)

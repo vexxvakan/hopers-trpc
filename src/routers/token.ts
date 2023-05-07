@@ -1,8 +1,8 @@
 import type { Token } from "../config/types"
-import { t } from "../trpc"
+import { publicProcedure, router } from "../trpc"
 
-export const tokenRouter = t.router({
-	tokenBySymbol: t.procedure.input(String).query(async ({ input }) => {
+export const tokenRouter = router({
+	tokenBySymbol: publicProcedure.input(String).query(async ({ input }: { input: string }) => {
 		const tokenListResponse = await fetch(
 			"https://raw.githubusercontent.com/vexxvakan/hopers-tokenlist/main/tokenList.json"
 		)

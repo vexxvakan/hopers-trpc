@@ -1,5 +1,11 @@
 import type { Decimal } from "decimal.js"
 
+export type ServerOptions = {
+	dev?: boolean
+	port?: number
+	prefix?: string
+}
+
 export type Token = {
 	isNativeCoin: boolean
 	isIBCCoin: boolean

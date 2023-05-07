@@ -8,4 +8,4 @@ node_modules
 !.yarn/versions
 yarn-error.log*
 
-*.local
+.env

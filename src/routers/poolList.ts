@@ -1,12 +1,12 @@
 import { Decimal } from "decimal.js"
 import type { Pool, Token } from "../config/types"
-import { t } from "../trpc"
 import { getCosmWasmClient } from "../utils/cosmwasmClient"
 import { convertDenomToMicroDenom, convertMicroDenomToDenom } from "../utils/helpers"
 import { queryRPC } from "../utils/queryRPC"
+import { publicProcedure, router } from "../trpc"
 
-export const poolListRouter = t.router({
-	poolList: t.procedure.query(async () => {
+export const poolListRouter = router({
+	poolList: publicProcedure.query(async () => {
 		const poolListResponse = await fetch(
 			"https://raw.githubusercontent.com/vexxvakan/hopers-tokenlist/main/poolList.json"
 		)
