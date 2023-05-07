@@ -61,7 +61,6 @@ export const poolListRouter = t.router({
 			})
 
 			const token2ReserveDenom = new Decimal(poolInfo.token2_reserve).dividedBy(
-				// convertMicroDenomToDenom(10, token2.decimal)
 				convertDenomToMicroDenom(10, token2.decimal)
 			)
 
